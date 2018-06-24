@@ -49,9 +49,7 @@ Task("Test")
     .IsDependentOn("Build")
     .Does(() =>
     {
-        var projects = GetFiles("./Moerwald.Specflow.Extension.Storage/**/bin/Release/Moerwald.Specflow.Storage.dll");
-        var sipUserAgentTests = GetFiles("./Moerwald.Specflow.Extension.Storage.Test/**/bin/Release/*.Test.dll");
-        projects.Add(sipUserAgentTests);
+        var projects = GetFiles("./Moerwald.Specflow.Extension.Storage.Test/**/bin/Release/*.Test.dll");
 
         Information("Found following dlls:");
         Information("{0}", string.Join("\r\n", projects));
