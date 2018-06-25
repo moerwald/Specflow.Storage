@@ -7,7 +7,6 @@ namespace SpecflowExtension.Storage.Test
     public class Steps
     {
         readonly Storage _storage = new Storage();
-        readonly TableParser _tableParser = new TableParser();
         private Message _message;
         
 
@@ -15,18 +14,30 @@ namespace SpecflowExtension.Storage.Test
         [When(@"the following message is generated")]
         public void GivenTheFollowingMessageIsGenerated(Table table)
         {
-            _tableParser.StoreValues.From(table).In(_storage).Store();
-            _tableParser.InjectValues.From(_storage).To(table).Inject();
+            var tableParser = new TableParser();
+
+            // Inject value in table
+            tableParser.InjectValues.From(_storage).To(table).Inject();
+            // Store values from table
+            tableParser.StoreValues.From(table).In(_storage).Store();
             _message = new Message();
             foreach(var row in table.Rows)
             {
-                _message.Parameters[row[ColumnNames.Field]] = row[ColumnNames.Value];
+                if (!tableParser.RawHasTablePersistorOnlyData(row))
+                {
+                    _message.Parameters[row[ColumnNames.Field]] = row[ColumnNames.Value];
+                }
             }
+
+            // Store values from object
+            tableParser.StoreValues.From(_message).And(table).In(_storage).Store();
         }
 
         [Then(@"the storage has the following entries")]
         public void ThenTheStorageHasTheFollowingEntries(Table table)
         {
+            var tableParser = new TableParser();
+            tableParser.InjectValues.From(_storage).To(table).Inject();
             foreach(var row in table.Rows)
             {
                 StringAssert.AreEqualIgnoringCase(row[ColumnNames.Value], _storage[row[ColumnNames.Field]]);

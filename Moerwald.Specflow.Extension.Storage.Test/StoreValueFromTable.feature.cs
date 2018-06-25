@@ -101,6 +101,21 @@ this.ScenarioSetup(scenarioInfo);
 #line 9
  testRunner.Then("the storage has the following entries", ((string)(null)), table2, "Then ");
 #line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table3.AddRow(new string[] {
+                        "MessageType",
+                        "TestMessage"});
+            table3.AddRow(new string[] {
+                        "Destination",
+                        "Destination1"});
+            table3.AddRow(new string[] {
+                        "IntValue",
+                        "1"});
+#line 14
+ testRunner.Then("the message contains", ((string)(null)), table3, "Then ");
+#line hidden
             this.ScenarioCleanup();
         }
         
@@ -109,68 +124,106 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void InjectStoredParameters()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Inject stored parameters", ((string[])(null)));
-#line 15
+#line 20
 this.ScenarioSetup(scenarioInfo);
-#line hidden
-            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Field",
-                        "Value"});
-            table3.AddRow(new string[] {
-                        "MessageType",
-                        "TestMessage => $MessageType$"});
-            table3.AddRow(new string[] {
-                        "Destination",
-                        "Destination1 =>$Destination$"});
-            table3.AddRow(new string[] {
-                        "IntValue",
-                        "1=> $IntValue$"});
-#line 16
-   testRunner.Given("the following message is generated", ((string)(null)), table3, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "Field",
                         "Value"});
             table4.AddRow(new string[] {
                         "MessageType",
-                        "TestMessage"});
+                        "TestMessage => $MessageType$"});
             table4.AddRow(new string[] {
                         "Destination",
-                        "Destination1"});
+                        "Destination1 =>$Destination$"});
             table4.AddRow(new string[] {
                         "IntValue",
-                        "1"});
+                        "1=> $IntValue$"});
 #line 21
-   testRunner.Then("the storage has the following entries", ((string)(null)), table4, "Then ");
+   testRunner.Given("the following message is generated", ((string)(null)), table4, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                         "Field",
                         "Value"});
             table5.AddRow(new string[] {
                         "MessageType",
-                        "<= $MessageType$"});
+                        "TestMessage"});
             table5.AddRow(new string[] {
                         "Destination",
-                        "<= $Destination$"});
+                        "Destination1"});
             table5.AddRow(new string[] {
                         "IntValue",
-                        "<=$IntValue$"});
+                        "1"});
 #line 26
-   testRunner.When("the following message is generated", ((string)(null)), table5, "When ");
+   testRunner.Then("the storage has the following entries", ((string)(null)), table5, "Then ");
 #line hidden
             TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                         "Field",
                         "Value"});
             table6.AddRow(new string[] {
                         "MessageType",
-                        "TestMessage"});
+                        "<= $MessageType$"});
             table6.AddRow(new string[] {
                         "Destination",
-                        "Destination1"});
+                        "<= $Destination$"});
             table6.AddRow(new string[] {
                         "IntValue",
-                        "1"});
+                        "<=$IntValue$"});
 #line 31
-  testRunner.Then("the message contains", ((string)(null)), table6, "Then ");
+   testRunner.When("the following message is generated", ((string)(null)), table6, "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table7.AddRow(new string[] {
+                        "MessageType",
+                        "TestMessage"});
+            table7.AddRow(new string[] {
+                        "Destination",
+                        "Destination1"});
+            table7.AddRow(new string[] {
+                        "IntValue",
+                        "1"});
+#line 36
+  testRunner.Then("the message contains", ((string)(null)), table7, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Store dynamically generated message parameters")]
+        public virtual void StoreDynamicallyGeneratedMessageParameters()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Store dynamically generated message parameters", ((string[])(null)));
+#line 42
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table8.AddRow(new string[] {
+                        "MessageType",
+                        "TestMessage => $MessageType$"});
+            table8.AddRow(new string[] {
+                        "Destination",
+                        "Destination1 =>$Destination$"});
+            table8.AddRow(new string[] {
+                        "IntValue",
+                        "1=> $IntValue$"});
+            table8.AddRow(new string[] {
+                        "MessageId",
+                        "=> $MessageId$"});
+#line 43
+ testRunner.Given("the following message is generated", ((string)(null)), table8, "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table9.AddRow(new string[] {
+                        "MessageId",
+                        "<= $MessageId$"});
+#line 49
+ testRunner.Then("the storage has the following entries", ((string)(null)), table9, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -1,9 +1,19 @@
-﻿namespace SpecflowExtension.Storage
-{
-    public class TableParser
-    {
-        public TablePersistor StoreValues { get; } = new TablePersistor();
+﻿using TechTalk.SpecFlow;
 
-        public TableInjector InjectValues { get;  } = new TableInjector();
+namespace SpecflowExtension.Storage
+{
+    public class TableParser : IRowHasTablePersistorOnlyValue
+    {
+        public TablePersistor StoreValues { get; private set; } = new TablePersistor();
+
+        public TableInjector InjectValues { get; private set; } = new TableInjector();
+
+        public void Reset()
+        {
+            StoreValues = new TablePersistor();
+            InjectValues = new TableInjector();
+        }
+
+        public bool RawHasTablePersistorOnlyData(TableRow row) => new TablePersistor().RawHasTablePersistorOnlyData(row);
     }
 }
