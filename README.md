@@ -22,7 +22,7 @@ Then the storage has the following entries
 | Destination | Destination1 |
 | IntValue    | 1            |
   
-Based on the "=>$xyz$" syntax you are able to store the given value. We're also able to inject beforehand stored values:
+Based on the "=>$xyz$" syntax you are able to store the given value. We're also able to inject beforehand stored values (base on the "<=$xyz$" syntax):
   
 When the following message is generated
 
