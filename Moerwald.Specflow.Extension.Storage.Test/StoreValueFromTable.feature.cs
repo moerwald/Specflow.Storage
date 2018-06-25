@@ -103,6 +103,49 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Inject stored parameters")]
+        public virtual void InjectStoredParameters()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Inject stored parameters", ((string[])(null)));
+#line 15
+this.ScenarioSetup(scenarioInfo);
+#line 16
+   testRunner.Given("lets run the scenario \"Store message parameters\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table3.AddRow(new string[] {
+                        "MessageType",
+                        "<= $MessageType$"});
+            table3.AddRow(new string[] {
+                        "Destination",
+                        "<= $Destination$"});
+            table3.AddRow(new string[] {
+                        "IntValue",
+                        "<=$IntValue$"});
+#line 17
+   testRunner.When("the following message is generated", ((string)(null)), table3, "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Field",
+                        "Value"});
+            table4.AddRow(new string[] {
+                        "MessageType",
+                        "TestMessage"});
+            table4.AddRow(new string[] {
+                        "Destination",
+                        "Destination1"});
+            table4.AddRow(new string[] {
+                        "IntValue",
+                        "1"});
+#line 22
+  testRunner.Then("the message contains", ((string)(null)), table4, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

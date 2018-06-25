@@ -13,5 +13,15 @@ namespace Moerwald.Specflow.Storage
 
             set => _storage[index] = value;
         }
+
+        public bool ContainsName(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new System.ArgumentException("message", nameof(name));
+            }
+            return _storage.ContainsKey(name);
+        }
+            
     }
 }
