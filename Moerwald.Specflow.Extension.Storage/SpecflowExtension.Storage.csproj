@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="ColumnNames.cs" />
     <Compile Include="IRowHasTablePersistorOnlyValue.cs" />
+    <Compile Include="ObjectPersistor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Storage.cs" />
     <Compile Include="TableInjectException.cs" />
