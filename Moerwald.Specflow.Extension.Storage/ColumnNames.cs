@@ -1,4 +1,4 @@
-﻿namespace Moerwald.Specflow.Storage
+﻿namespace SpecflowExtension.Storage
 {
     public static class ColumnNames
     {

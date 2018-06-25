@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Moerwald.Specflow.Storage.Test
+namespace SpecflowExtension.Storage.Test
 {
     using TechTalk.SpecFlow;
     

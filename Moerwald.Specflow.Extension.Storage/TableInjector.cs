@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using TechTalk.SpecFlow;
 
-namespace Moerwald.Specflow.Storage
+namespace SpecflowExtension.Storage
 {
     public class TableInjector
     {

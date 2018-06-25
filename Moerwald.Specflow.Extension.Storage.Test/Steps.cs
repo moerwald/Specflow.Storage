@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using TechTalk.SpecFlow;
 
-namespace Moerwald.Specflow.Storage.Test
+namespace SpecflowExtension.Storage.Test
 {
     [Binding]
     public class Steps

@@ -1,4 +1,4 @@
-﻿namespace Moerwald.Specflow.Storage.Test
+﻿namespace SpecflowExtension.Storage.Test
 {
     public static class ColumnNames
     {

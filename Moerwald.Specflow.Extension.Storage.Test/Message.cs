@@ -1,6 +1,6 @@
 ﻿using System.Collections.Concurrent;
 
-namespace Moerwald.Specflow.Storage.Test
+namespace SpecflowExtension.Storage.Test
 {
     public class Message
     {

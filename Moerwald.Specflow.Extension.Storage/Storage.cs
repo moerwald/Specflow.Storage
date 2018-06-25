@@ -1,6 +1,6 @@
 ﻿using System.Collections.Concurrent;
 
-namespace Moerwald.Specflow.Storage
+namespace SpecflowExtension.Storage
 {
     public class Storage
     {

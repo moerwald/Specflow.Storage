@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Moerwald.Specflow.Storage
+namespace SpecflowExtension.Storage
 {
     public class TableParsingException : Exception
     {

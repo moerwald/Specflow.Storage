@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27110.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moerwald.Specflow.Storage", "Moerwald.Specflow.Extension.Storage\Moerwald.Specflow.Storage.csproj", "{9DE81F82-FAA8-4F3E-90AA-8E1D3B894345}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecflowExtension.Storage", "Moerwald.Specflow.Extension.Storage\SpecflowExtension.Storage.csproj", "{9DE81F82-FAA8-4F3E-90AA-8E1D3B894345}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moerwald.Specflow.Storage.Test", "Moerwald.Specflow.Extension.Storage.Test\Moerwald.Specflow.Storage.Test.csproj", "{B32EDE77-C60B-4E5D-BA9D-1B0B999E359C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecflowExtension.Storage.Test", "Moerwald.Specflow.Extension.Storage.Test\SpecflowExtension.Storage.Test.csproj", "{B32EDE77-C60B-4E5D-BA9D-1B0B999E359C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
