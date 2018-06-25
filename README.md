@@ -24,16 +24,18 @@ Then the storage has the following entries
 Based on the "=>$xyz$" syntax you are able to store the given value. We're also able to inject beforehand stored values:
   
 When the following message is generated
-	| Field       | Value            |
-	|-------------|------------------|
-	| MessageType | <= $MessageType$ |
-	| Destination | <= $Destination$ |
-	| IntValue    | <=$IntValue$     |
+| Field       | Value            |
+|-------------|------------------|
+| MessageType | <= $MessageType$ |
+| Destination | <= $Destination$ |
+| IntValue    | <=$IntValue$     |
+
 Then the message contains
-	| Field       | Value        |
-	|-------------|--------------|
-	| MessageType | TestMessage  |
-	| Destination | Destination1 |
-	| IntValue    | 1            |
+| Field       | Value        |
+|-------------|--------------|
+| MessageType | TestMessage  |
+| Destination | Destination1 |
+| IntValue    | 1            |
+
 
 
