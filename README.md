@@ -41,4 +41,41 @@ Then the message contains
 | IntValue    | 1            |
 
 
+Based on that this module offers two main objects:
 
+- Storage, simple key-value-storage
+- TableParser, entrypoint to inject or store data to or from a table.
+
+
+###### Store data from a table
+
+```
+        [Given(@"blabla")]
+        public void SomeGivenStep(Table table)
+        {
+            var tableParser = new TableParser();
+            
+            // Store values from table -> _storage is property of the Steps objects
+            tableParser.StoreValues.From(table).In(_storage).Store();
+            _message = new Message();
+            foreach(var row in table.Rows)
+            {
+                if (!tableParser.RawHasTablePersistorOnlyData(row)) // Ignore rows that have only data for the TableParser
+                {
+                    _message.Parameters[row[ColumnNames.Field]] = row[ColumnNames.Value];
+                }
+            }         
+        }
+```
+
+###### Inject data from a storage to a table
+```
+        [Then(@"blablabla")]
+        public void SomeThanStep(Table table)
+        {
+            var tableParser = new TableParser();
+            tableParser.InjectValues.From(_storage).To(table).Inject();
+            
+            // Move on here
+        }
+```
