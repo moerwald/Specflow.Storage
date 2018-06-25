@@ -49,7 +49,7 @@ Based on that this module offers two main objects:
 
 ###### Store data from a table
 
-```
+```csharp
         [Given(@"blabla")]
         public void SomeGivenStep(Table table)
         {
@@ -69,7 +69,7 @@ Based on that this module offers two main objects:
 ```
 
 ###### Inject data from a storage to a table
-```
+```csharp
         [Then(@"blablabla")]
         public void SomeThanStep(Table table)
         {
