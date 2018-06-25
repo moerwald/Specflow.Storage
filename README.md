@@ -15,6 +15,7 @@ Given the following message is generated
 | IntValue    | 1=> $IntValue$               |
 
 Then the storage has the following entries
+
 | Field       | Value        |
 |-------------|--------------|
 | MessageType | TestMessage  |
@@ -24,6 +25,7 @@ Then the storage has the following entries
 Based on the "=>$xyz$" syntax you are able to store the given value. We're also able to inject beforehand stored values:
   
 When the following message is generated
+
 | Field       | Value            |
 |-------------|------------------|
 | MessageType | <= $MessageType$ |
@@ -31,6 +33,7 @@ When the following message is generated
 | IntValue    | <=$IntValue$     |
 
 Then the message contains
+
 | Field       | Value        |
 |-------------|--------------|
 | MessageType | TestMessage  |
