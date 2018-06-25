@@ -15,7 +15,7 @@ namespace Moerwald.Specflow.Storage.Test
         [When(@"the following message is generated")]
         public void GivenTheFollowingMessageIsGenerated(Table table)
         {
-            _tableParser.StoreValues.From(table).In(_storage).Parse();
+            _tableParser.StoreValues.From(table).In(_storage).Store();
             _tableParser.InjectValues.From(_storage).To(table).Inject();
             _message = new Message();
             foreach(var row in table.Rows)
@@ -23,13 +23,6 @@ namespace Moerwald.Specflow.Storage.Test
                 _message.Parameters[row[ColumnNames.Field]] = row[ColumnNames.Value];
             }
         }
-
-        [Given(@"lets run the scenario ""(.*)""")]
-        public void GivenLetsRunTheScenario(string scenarioName)
-        {
-            new StoreValueFromTableFeature().StoreMessageParameters();
-        }
-
 
         [Then(@"the storage has the following entries")]
         public void ThenTheStorageHasTheFollowingEntries(Table table)
