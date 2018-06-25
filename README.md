@@ -79,3 +79,6 @@ Based on that this module offers two main objects:
             // Move on here
         }
 ```
+
+For further examples see https://github.com/moerwald/Specflow.Storage/blob/master/Moerwald.Specflow.Extension.Storage.Test/StoreValueFromTable.feature
+
