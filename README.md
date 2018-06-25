@@ -4,7 +4,9 @@ When using the Field,Value table syntax in specflow, we are not able to store ce
 
 
 Scenario: Store message parameters
-	Given the following message is generated
+
+
+Given the following message is generated
 	| Field       | Value                        |
 	|-------------|------------------------------|
 	| MessageType | TestMessage => $MessageType$ |
@@ -17,15 +19,15 @@ Scenario: Store message parameters
 	| Destination | Destination1 |
 	| IntValue    | 1            |
   
-  Based on the "=>$xyz$" syntax you are able to store the given value. We're also able to inject beforehand stored values:
+Based on the "=>$xyz$" syntax you are able to store the given value. We're also able to inject beforehand stored values:
   
-   When the following message is generated
+When the following message is generated
 	| Field       | Value            |
 	|-------------|------------------|
 	| MessageType | <= $MessageType$ |
 	| Destination | <= $Destination$ |
 	| IntValue    | <=$IntValue$     |
-  Then the message contains
+Then the message contains
 	| Field       | Value        |
 	|-------------|--------------|
 	| MessageType | TestMessage  |
