@@ -24,7 +24,7 @@ namespace SpecflowExtension.Storage
             {
                 foreach (Match match in _injectValue.Matches(row[ColumnNames.Value]))
                 {
-                    var name = row[ColumnNames.Field];
+                    var name = match.Groups["name"]?.Value ?? "No value in regex matc value in regex matchh";
                     if (_storage.ContainsName(name) == false)
                     {
                         throw new TableInjectException($"Storage doesn't contain {name}");
