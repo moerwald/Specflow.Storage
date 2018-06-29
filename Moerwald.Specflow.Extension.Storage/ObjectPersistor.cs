@@ -35,7 +35,7 @@ namespace SpecflowExtension.Storage
                 foreach (Match match in _fetchValueRegex.Matches(value))
                 {
                     var parsedName = match.Groups[_RegexGroupName]?.Value ?? throw new TableParsingException($"Could not find {nameof(_RegexGroupName)} in {tableRow}");
-                    var valueFromObject = _objectToFetchDataFrom.GetType().GetProperty(parsedName).GetValue(_objectToFetchDataFrom);
+                    var valueFromObject = _objectToFetchDataFrom.GetType().GetProperty(field).GetValue(_objectToFetchDataFrom);
                     _storage[parsedName] = valueFromObject.ToString();
                 }
             }
