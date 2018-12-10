@@ -2,7 +2,7 @@
 
 namespace SpecflowExtension.Storage
 {
-    public class TableParser : IRowHasTablePersistorOnlyValue
+    public class TableParser : IRowHasDataToPersist
     {
         public TablePersistor StoreValues { get; private set; } = new TablePersistor();
 
@@ -14,6 +14,6 @@ namespace SpecflowExtension.Storage
             InjectValues = new TableInjector();
         }
 
-        public bool RawHasTablePersistorOnlyData(TableRow row) => new TablePersistor().RawHasTablePersistorOnlyData(row);
+        public bool HasDataToPersist(string value) => new TablePersistor().HasDataToPersist(value);
     }
 }

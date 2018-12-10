@@ -4,7 +4,10 @@ using TechTalk.SpecFlow;
 
 namespace SpecflowExtension.Storage
 {
-    public class TablePersistor : IRowHasTablePersistorOnlyValue
+    /// <summary>
+    /// Stores rows from a given Specflow table in the internal storage.
+    /// </summary>
+    public class TablePersistor : IRowHasDataToPersist
     {
         /// <summary>
         /// used if value and value name are given in one line. E.g. "TestMessage =>$MessageType$"
@@ -27,7 +30,7 @@ namespace SpecflowExtension.Storage
             return this;
         }
 
-        public ObjectPersistor<TObject> From<TObject>(TObject objectToFetchDataFrom) => new ObjectPersistor<TObject>(objectToFetchDataFrom);
+        public ObjectPersistor<TObject> From<TObject>(TObject objectToFetchDataFrom, Table table) => new ObjectPersistor<TObject>(objectToFetchDataFrom, table); 
 
         public void Store()
         {
@@ -49,6 +52,8 @@ namespace SpecflowExtension.Storage
             }
         }
 
-        public bool RawHasTablePersistorOnlyData(TableRow row) => new ObjectPersistor<string>(string.Empty /* Something to feed the CTOR*/).RawHasTablePersistorOnlyData(row);
+        public bool HasDataToPersist(string value) => 
+            _valueIsGivenStoreItRegex.IsMatch(value) || 
+            new ObjectPersistor<string>().HasDataToPersist(value);
     }
 }

@@ -8,7 +8,6 @@ namespace SpecflowExtension.Storage.Test
     {
         readonly Storage _storage = new Storage();
         private Message _message;
-        
 
         [Given(@"the following message is generated")]
         [When(@"the following message is generated")]
@@ -23,14 +22,14 @@ namespace SpecflowExtension.Storage.Test
             _message = new Message();
             foreach(var row in table.Rows)
             {
-                if (!tableParser.RawHasTablePersistorOnlyData(row))
+                if (!tableParser.HasDataToPersist(row[ColumnNames.Value]))
                 {
                     _message.Parameters[row[ColumnNames.Field]] = row[ColumnNames.Value];
                 }
             }
 
             // Store values from object
-            tableParser.StoreValues.From(_message).And(table).In(_storage).Store();
+            tableParser.StoreValues.From(_message, table).In(_storage).Store();
         }
 
         [Then(@"the storage has the following entries")]
@@ -56,6 +55,5 @@ namespace SpecflowExtension.Storage.Test
                 StringAssert.AreEqualIgnoringCase(value, _message.Parameters[name]);
             }
         }
-
     }
 }
