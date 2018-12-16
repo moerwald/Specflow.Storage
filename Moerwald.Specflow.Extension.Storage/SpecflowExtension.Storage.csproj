@@ -1,6 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
+    <Version>1.4.0</Version>
+    <Description />
+    <PackageLicenseUrl>https://github.com/moerwald/Specflow.Storage/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/moerwald/Specflow.Storage</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/moerwald/Specflow.Storage</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="SpecFlow" Version="2.4.0" />
