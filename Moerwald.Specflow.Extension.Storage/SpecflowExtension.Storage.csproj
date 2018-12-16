@@ -9,7 +9,9 @@
     <RepositoryType>GitHub</RepositoryType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="SpecFlow" Version="2.4.0" />
+          <PackageReference Include="Newtonsoft.Json" Version="10.0.3" targetFramework="net471" />
+          <PackageReference Include="SpecFlow" version="2.4.0" targetFramework="net471" />
+          <PackageReference Include="System.ValueTuple" version="4.3.0" targetFramework="net471" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
