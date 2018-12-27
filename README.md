@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/andreasmewald/Specflow.Storage/_apis/build/status/moerwald.Specflow.Storage?branchName=master)](https://dev.azure.com/andreasmewald/Specflow.Storage/_build/latest?definitionId=2?branchName=master)
+
 # Specflow.Storage
 
 When using the Field,Value table syntax in specflow, we are not able to store certain values from a specfic TableRow. This package offers a TableParser and a simple key-value-storage to perform following actions:
