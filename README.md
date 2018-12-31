@@ -1,4 +1,6 @@
 [![Build Status](https://dev.azure.com/andreasmewald/Specflow.Storage/_apis/build/status/moerwald.Specflow.Storage?branchName=master)](https://dev.azure.com/andreasmewald/Specflow.Storage/_build/latest?definitionId=2?branchName=master)
+[![](https://img.shields.io/nuget/dt/SpecflowExtension.Storage.svg)](https://www.nuget.org/packages/SpecflowExtension.Storage)
+[![](https://img.shields.io/nuget/v/SpecflowExtension.Storage.svg)](https://www.nuget.org/packages/SpecflowExtension.Storage)
 
 # Specflow.Storage
 
