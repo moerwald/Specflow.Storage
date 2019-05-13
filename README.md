@@ -1,6 +1,12 @@
 [![Build Status](https://dev.azure.com/andreasmewald/Specflow.Storage/_apis/build/status/moerwald.Specflow.Storage?branchName=master)](https://dev.azure.com/andreasmewald/Specflow.Storage/_build/latest?definitionId=2?branchName=master)
 [![](https://img.shields.io/nuget/dt/SpecflowExtension.Storage.svg)](https://www.nuget.org/packages/SpecflowExtension.Storage)
 [![](https://img.shields.io/nuget/v/SpecflowExtension.Storage.svg)](https://www.nuget.org/packages/SpecflowExtension.Storage)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=moerwald_Specflow.Storage&metric=alert_status)](https://sonarcloud.io/dashboard?id=moerwald_Specflow.Storage)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=moerwald_Specflow.Storage&metric=code_smells)](https://sonarcloud.io/dashboard?id=moerwald_Specflow.Storage)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=moerwald_Specflow.Storage&metric=bugs)](https://sonarcloud.io/dashboard?id=moerwald_Specflow.Storage)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=moerwald_Specflow.Storage&metric=security_rating)](https://sonarcloud.io/dashboard?id=moerwald_Specflow.Storage)
+
+
 
 # Specflow.Storage
 
