@@ -5,7 +5,7 @@ namespace SpecflowExtension.Storage
     public class Storage
     {
 
-        ConcurrentDictionary<string, string> _storage = new ConcurrentDictionary<string, string>();
+        private readonly ConcurrentDictionary<string, string> _storage = new ConcurrentDictionary<string, string>();
 
         public string this[string index]
         {
