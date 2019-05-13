@@ -23,13 +23,21 @@ steps:
     projectKey: 'moerwald_Specflow.Storage'
     projectName: 'Specflow.Storage'
 
+# Install SonarScanner
+- script: |
+     dotnet tool install --global dotnet-sonarscanner
+  displayName: 'install sonarscanner'
+
+# Run Sonar
+- script: |
+     dotnet sonarscanner begin /k:"moerwald_Specflow.Storage" 
+  displayName: 'sonarscanner begin'
+
 - task: NuGetToolInstaller@0
 
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
-
-
 
 - task: VSBuild@1
   inputs:
@@ -41,3 +49,12 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+# End SonarScanner
+- script: |
+    dotnet sonarscanner end 
+  displayName: 'sonarscanner end'
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
