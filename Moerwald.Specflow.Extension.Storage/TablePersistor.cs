@@ -46,9 +46,7 @@ namespace SpecflowExtension.Storage
                     var valueToStore = parsedValue.Trim();
                     _storage[parsedName] = valueToStore;
                     tableRow[ColumnNames.Value] = valueToStore;
-                    continue;
                 }
-
             }
         }
 
