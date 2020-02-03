@@ -41,6 +41,5 @@ namespace SpecflowExtension.Storage
             _storage = storage;
             return this;
         }
-
     }
 }
